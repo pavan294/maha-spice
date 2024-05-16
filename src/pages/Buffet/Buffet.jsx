@@ -52,7 +52,7 @@ const Buffet = ({catering}) => {
   // Function to fetch buffet data
   const fetchBuffetData = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/buffet");
+      const response = await axios.get("http://16.171.146.50:5000/buffet");
       setBuffetData(response.data);
     } catch (error) {
       console.error("Error fetching buffet data:", error);
@@ -105,7 +105,7 @@ const Buffet = ({catering}) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/buffet", formData);
+      const response = await axios.post("http://16.171.146.50:5000/buffet", formData);
       if (response.status === 201) {
         // Reset form data after successful submission
         setFormData({

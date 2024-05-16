@@ -16,7 +16,7 @@ const ManageBookings = () => {
     enabled: !loading,
     queryFn: async () => {
       const res = await fetch(
-        'http://localhost:5000/payments/all',
+        'http://16.171.146.50:5000/payments/all',
         {
           headers: {
             authorization: `Bearer ${token}`,

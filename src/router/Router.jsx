@@ -103,7 +103,7 @@ const router = createBrowserRouter([
         {
           path: 'update-menu/:id',
           element: <UpdateMenu/>,
-          loader: ({ params }) => fetch(`http://localhost:5000/menu/${params.id}`)  //BOX-GENIE BACKEND MENU
+          loader: ({ params }) => fetch(`http://16.171.146.50:5000/menu/${params.id}`)  //BOX-GENIE BACKEND MENU
         },
         {
           path: 'bookings',

@@ -8,7 +8,7 @@ const BuffetPage = () => {
   // Function to fetch buffet data
   const fetchBuffetData = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/buffet");
+      const response = await axios.get("http://16.171.146.50:5000/buffet");
       setBuffetData(response.data.reverse());
     } catch (error) {
       console.error("Error fetching buffet data:", error);
@@ -29,7 +29,7 @@ const BuffetPage = () => {
   const handleDeleteItem = async (name) => {
     try {
       // Send delete request with item name
-      const response = await axios.delete(`http://localhost:5000/buffet/${name}`);
+      const response = await axios.delete(`http://16.171.146.50:5000/buffet/${name}`);
       if (response.status === 200) {
         // Remove the deleted item from the state
         const updatedBuffetData = buffetData.filter(item => item.name !== name);

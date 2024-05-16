@@ -19,7 +19,7 @@ const BoxGenie = () => {
     // Fetch data from the backend
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/menu");  //FETCHING BOXES FROM THE BACKEND - MENU DB
+        const response = await fetch("http://16.171.146.50:5000/menu");  //FETCHING BOXES FROM THE BACKEND - MENU DB
         const data = await response.json();
         setMenu(data);
         setFilteredItems(data); // Initially, display all items
